@@ -1,9 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Chess Tree Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
 <body>
-
-<h1>Heading</h1>
-<p>Paragraph.</p>
-
+    <h1>Chess Tree Visualizer</h1>
+    <p>{{ message }}</p>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-</html> 
+</html>
