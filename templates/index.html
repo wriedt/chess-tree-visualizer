@@ -8,6 +8,20 @@
     <h1>Chess Tree Visualizer</h1>
     <p>{{ message }}</p>
     
+    {% if game_info %}
+    <h2>Game Information:</h2>
+    <ul>
+        {% for key, value in game_info.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if moves %}
+    <h2>Moves:</h2>
+    <p>{{ moves|join(', ') }}</p>
+    {% endif %}
+    
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
